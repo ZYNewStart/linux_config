@@ -1,0 +1,43 @@
+sudo apt-get install vim
+----------------------------------------------------------------
+Sudo apt-get install openssh-server
+----------------------------------------------------------------
+aliyun
+sudo gedit /etc/apt/sources.list
+sudo get-apt update
+----------------------------------------------------------------
+sudo apt-get install libncurses5-dev
+----------------------------------------------------------------
+sogoupinyin
+(1)在官网下了deb包（http://pinyin.sogou.com/linux/）
+(2)sudo dpkg -i sogoupinyin_2.0.0.0078_amd64.deb
+(3)安装失败，提示缺少依赖的包：fictx\fictx-libs
+apt-get install -f
+(4)注销系统
+----------------------------------------------------------------
+git
+(1)ssh-keygen -C "zhouyong1508379@163.com" -f ~/.ssh/github
+将~/.ssh/github.pub文件内容拷贝到剪切板,GitHub的SSH公钥管理的对话框，即上图key对话框中，并为这个SSH Key起个名字并保存。
+(2)ssh -T git@github.com
+(3)git config --global user.email "zhouyong1508379@163.com"
+(4)git config --global user.name "ZYNewStart"
+
+git clone git@github.com:"account context"/"repos name".git//从GitHub服务器复制一个版本库到本地
+git add .    //往暂存区域添加已添加和修改的文件，不处理删除的文件. 如果添加目录，则可以用*代替
+git status   //比较本地数据目录与暂存区域的变化
+git commit -m "commit directions" //提到代码到本地数据目录，并添加提交说明
+git pull     //更新代码
+git init	//建立仓库.目录下多了一个.git隐藏文件
+git remote add origin git@github.com:你的github用户名/你的github项目名.git	//上传项目
+git remote rm origin	//remote origin already exists.移除
+git push -u origin master
+
+----------------------------------------------------------------
+autojump
+sudo apt-get install autojump
+autojump默认的别名j
+autojump -a [目录]	//手动添加一个目录
+autojump -i [权重]	//增加它的权重
+autojump -d [权重]	//减少权重
+autojump -s	//跟踪所有这些改变
+autojump --purge	//把不再存在的目录从数据库中移除
