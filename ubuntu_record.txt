@@ -35,6 +35,7 @@ git push -u origin master
 ----------------------------------------------------------------
 autojump
 sudo apt-get install autojump
+echo '. /usr/share/autojump/autojump.sh' >> ~/.bashrc
 autojump默认的别名j
 autojump -a [目录]	//手动添加一个目录
 autojump -i [权重]	//增加它的权重
